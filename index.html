@@ -46,7 +46,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .nav a:hover{color:var(--ink)}
 @media (max-width:640px){.nav{gap:14px}.nav a.hide-sm{display:none}}
 
-.hero{padding:88px 0 64px}
+.hero{padding:88px 0 64px;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:48px;align-items:center}
+.hero-photo{width:100%;max-width:340px;aspect-ratio:1/1;object-fit:cover;border-radius:28px;justify-self:end;border:6px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
+@media (max-width:800px){.hero{grid-template-columns:1fr;padding-top:48px;gap:32px}.hero-photo{order:-1;justify-self:start;max-width:180px;border-radius:22px}}
 .hero .avail{display:inline-block;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:.9rem;color:var(--accent);background:var(--accent-soft);padding:4px 12px;border-radius:999px;margin-bottom:24px}
 .hero h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.04;letter-spacing:-.02em;margin:0 0 20px;max-width:15ch;font-weight:800}
 .hero p.lede{font-size:1.2rem;color:var(--muted);max-width:60ch;margin:0 0 32px}
@@ -122,6 +124,7 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
 
 <main>
   <div class="wrap hero">
+    <div>
     <span class="avail">Open to remote roles in the US and Canada</span>
     <h1>I turn customer conversations into systems that run.</h1>
     <p class="who">Precious Omole, Customer Experience &amp; AI Automation Specialist</p>
@@ -131,6 +134,8 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
       <a class="btn ghost" href="#work">See the AI work</a>
       <a class="btn ghost" href="https://linkedin.com/in/preciousomole3" target="_blank" rel="noopener">LinkedIn</a>
     </div>
+    </div>
+    <img class="hero-photo" src="precious-omole.jpg" width="800" height="800" alt="Precious Omole wearing a headset, smiling">
   </div>
 
   <section id="work">
